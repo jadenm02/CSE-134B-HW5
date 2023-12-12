@@ -23,7 +23,6 @@ class RatingWidget extends HTMLElement {
             <p id="ratingMessage"></p>
         `;
 
-        // Event listeners for hover and click
         this.initEventListeners();
     }
 
@@ -43,11 +42,13 @@ class RatingWidget extends HTMLElement {
     }
 
     handleSubmit(rating) {
-        // Display message based on rating
         const messageElement = this.shadowRoot.getElementById('ratingMessage');
-        messageElement.textContent = rating >= 4 ? 'Thank you for the positive rating!' : 'We will try to improve.';
+        if (rating >= 4) {
+            messageElement.textContent = 'Thank you for the positive rating!';
+        } else {
+            messageElement.textContent = "We'll try to do better!";
+        }
 
-        // Send rating to the server
         fetch('https://httpbin.org/post', {
             method: 'POST',
             headers: {
