@@ -1,12 +1,26 @@
-<rating-widget>
-      <form-action="https://httpbin.org/post" method="POST">
-             <label for="rating">How satisfied are you?</label>
-	           <input type="hidden" name = "question" value ="How satisfied are you?">
-	           <input type="hidden" name="sentBy" value="HTML">
-	            input type ="number" id="rating" name="rating" min="1"
-	            max="5" value="0" required>
-	            button type="submit">Submit</button>
-     </form>
-</rating-widget>
 
-<!--- this comment is a test!!!!!!-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rating Widget</title>
+</head>
+<body>
+	<main>
+		<rating-widget></rating-widget>
+	</main>
+        
+	</html>
+</body>
+</html>
+
+<rating-widget>
+	<form-action="https://httpbin.org/post" method="POST">
+		   <label for="rating">How satisfied are you?</label>
+			 <input type="hidden" name = "question" value ="How satisfied are you?">
+			 <input type="hidden" name="sentBy" value="HTML">
+			  input type ="number" id="rating" name="rating" min="1"
+			  max="5" value="0" required>
+			  button type="submit">Submit</button>
+   </form>
+</rating-widget>
